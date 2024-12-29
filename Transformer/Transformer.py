@@ -213,7 +213,7 @@ class DecoderLayer(nn.Module):
         x = self.norm1(x + self.dropout(masked_attn_out))  # Residual Connection 후 Layer Normalization.
         
         # Encoder-Decoder Attention: 인코더의 출력 정보 활용.
-        enc_dec_attn_out = self.encoder_attention(x, encoder_out, encoder_out, src_mask)
+        enc_dec_attn_out = self.encoder_attention(encoder_out, encoder_out, x, src_mask)
         x = self.norm2(x + self.dropout(enc_dec_attn_out))  # Residual Connection 후 Layer Normalization.
         
         # Feed Forward Network.
