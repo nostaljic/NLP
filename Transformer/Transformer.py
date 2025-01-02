@@ -34,7 +34,7 @@ class MultiHeadAttention(nn.Module):
         논문의 Scaled Dot-Product Attention 부분을 구현.
         쿼리와 키 간 점곱 후, 키의 차원 크기(d_k)의 제곱근으로 스케일링.
         """
-        d_k = query.size(-1)  # 키의 차원 크기(d_k).
+        d_k = key.size(-1)  # 키의 차원 크기(d_k).
         # 쿼리와 키의 점곱 계산. 논문에서 Q * K^T.
         scores = torch.matmul(query, key.transpose(-2, -1)) / math.sqrt(d_k)  # 스케일링 수행.
 
