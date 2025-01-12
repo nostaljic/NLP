@@ -7,6 +7,7 @@
 This project focuses on validating a **Retrieval-Augmented Generation (RAG)** pipeline by assessing its retrieval and generation capabilities using specific metrics like **Recall**, **Precision**, **F1-Score**, and qualitative evaluations of **Answer Relevance** and **Faithfulness**.
 
 ## RAG Pipeline
+![image](https://github.com/user-attachments/assets/abc0dbaa-b1d5-4ed3-90b1-72e6747f9d37)
 
 The pipeline follows these steps:
 
