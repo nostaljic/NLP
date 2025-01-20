@@ -1,6 +1,4 @@
 import torch
-import transformers
-import datasets
 from . import IValidService
 
 class ArcValidService(IValidService):
@@ -24,6 +22,7 @@ class ArcValidService(IValidService):
         return label_probs
 
     def validate(self) -> None:
+        answer_count = 0
         for i,d in enumerate(self.dataset):
             input_ids = self.tokenizer.apply_chat_template(
                 conversation=[
@@ -37,14 +36,14 @@ class ArcValidService(IValidService):
                 self.model(input_ids).logits[0][-1], 
             )
             answer = self.get_label_tokens(next_token_key_values,d['label'])[0]
-
-            answer_count = 0
+            
             if answer[0] == d['real_answer']:
                 answer_count+=1
                 print(f"{i}. Output: {answer[0]} , Reference: {d['real_answer']} :: O")
             else:
                 print(f"{i}. Output: {answer[0]} , Reference: {d['real_answer']} :: X")
-        print(f"Score: {answer_count/len(self.dataset}")
+        
+        print(f"Score: {answer_count/len(self.dataset)}")
                 
     def preprocess_data(self, row) -> dict:
         common_system_prompt = "Select one answer from above candidates."
