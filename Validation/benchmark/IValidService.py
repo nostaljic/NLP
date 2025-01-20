@@ -18,7 +18,8 @@ class IValidService(ABC):
     def preprocess_dataset(self) -> None:
         self.dataset = self.dataset.map(
             self.preprocess_data, 
-            remove_columns=self.dataset.column_names
+            remove_columns=self.dataset.column_names,
+            load_from_cache_file=False
         )
     
     @abstractmethod

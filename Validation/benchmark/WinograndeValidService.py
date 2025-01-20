@@ -51,17 +51,15 @@ class WinograndeValidService(IValidService):
         row_sentence = row['sentence']
         row_option1 = row['option1']
         row_option2 = row['option2']
-        
+        row_answer = row['answer']
         # Prepare the candidate prompt using the options
-        row_choices_prompt = "\n".join([f"A. {row_option1}", f"B. {row_option2}"])
+        row_choices_prompt = "\n".join([f"1. {row_option1}", f"2. {row_option2}"])
         row_user_prompt = f"{row_sentence} {row_choices_prompt}"
         
-        #####
-        row_label = int(row['answer'])  # the correct label in numeric form (1 or 2)
-        real_answer = "A" if row_label == 1 else "B"  # Convert numeric label to corresponding choice (A or B)
+        ###### the correct label in numeric form (1 or 2)
         return {
             "system_prompt": common_system_prompt,
             "user_prompt": row_user_prompt,
-            "label": ["A", "B"],  # The options A and B
-            "real_answer": real_answer
+            "label": ["1", "2"],  # The options A and B
+            "real_answer": row_answer
         }

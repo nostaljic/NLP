@@ -5,7 +5,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 # User should customize to utilize this benchmark
 model_directory = "./ai"
 model_filename = "qwen.gguf"
-dataset_index = 6
+dataset_index = 3 # Related to "available_datasets" variables above
 
 # Initialize model and tokenizer
 print("Loading model and tokenizer...")
@@ -16,8 +16,8 @@ available_datasets = [
     ('jaypyon/GSM8K','GSM8K', 'test'),
     ('jaypyon/GSM8K-SOCRATIC','GSM8K', 'test'),
     #----------------------------#
-    ('jaypyon/Winogrande_debiased','Winogrande', 'test'),
-    ('jaypyon/Winogrande','Winogrande', 'test'),
+    ('jaypyon/Winogrande_debiased','Winogrande', 'validation'),
+    ('jaypyon/Winogrande','Winogrande', 'validation'),
     #----------------------------#
     ('jaypyon/TruthfulMCQA','TruthfulMCQA', 'validation'),
     #----------------------------#
