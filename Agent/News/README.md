@@ -2,6 +2,7 @@
 
 ## Overview
 **Project Hyean** analyzes South Korean economic news and assesses its potential impact on the economy. The goal is to provide quick, concise, and informative posts based on the analysis results. These insights are delivered in the form of comments for easy consumption by the public. This project is designed for demo and testing purposes; please refrain from any misuse.
+![image](https://github.com/user-attachments/assets/8ff3b3e7-9ed6-4589-92a2-8aff8aa6f4f0)
 
 ## Automation for Web Integration
 If you need automation for different types of websites, simply inherit the `NewsService` class and implement it accordingly. The `leave_comment` function, which is responsible for posting comments, can be customized with various APIs or UI-based automation without deviating from the core structure.
