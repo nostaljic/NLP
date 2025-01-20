@@ -1,0 +1,4 @@
+{
+    "summary_prompt":"<|im_start|>system\n다음 글을 요약하시오.<|im_end|>\n<|im_start|>user\n{content}\n---\n위 내용을 300자로 요약해줘<|im_end|>\n<|im_start|>assistant\n",
+    "reply_prompt":"<|im_start|>system\n요약된 글을 토대로, 우리나라 경제와 어떤 연관이 있는지 댓글로 작성할 거야. 분석해서 알려줘.<|im_end|>\n<|im_start|>user\n본문요약:{summary}\n---\n위 내용을 보고 경제 분석 코멘트 써줘.<|im_end|>\n<|im_start|>assistant\n"
+}
