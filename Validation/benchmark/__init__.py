@@ -5,3 +5,4 @@ from .MMLUValidService import MMLUValidService
 from .HellaSwagValidService import HellaSwagValidService
 from .TruthfulMCQAValidService import TruthfulMCQAValidService
 from .WinograndeValidService import WinograndeValidService
+from .GSM8KValidService import GSM8KValidService
