@@ -1,6 +1,7 @@
 ## Overview
 
 In an era of increasingly capable language models, systematic evaluation is critical to understanding their strengths, weaknesses, and applicability in real-world scenarios. This validation framework provides tailored services for evaluating language models across diverse benchmarks. Each service is designed to handle a specific dataset, preprocess the data for model compatibility, and assess the model's performance by comparing predictions against ground truth labels.
+![image](https://github.com/user-attachments/assets/3529784c-da23-4321-b0c5-35c7778d20c7)
 
 
 ### Purpose of Each Dataset
